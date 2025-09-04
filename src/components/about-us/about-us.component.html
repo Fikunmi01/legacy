@@ -1,0 +1,119 @@
+<div class="lg:px-[60px] px-4 py-5 lg:py-10">
+  <div class="flex items-center gap-7">
+    <img src="assets/Group 9.png" alt="" />
+    <div>
+      <h3 class="text-[#FAA316] text-xl font-semibold">About us</h3>
+    </div>
+  </div>
+  <div class="font-lexend flex flex-col mb-20 lg:items-center justify-between">
+    <p
+      class="font-lexend lg:w-2/3 font-bold text-2xl lg:text-4xl text-center text-[#0D0D0D] my-4"
+    >
+      You can depend on us to get a good service
+    </p>
+    <div class="grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-3 my-4 mb-14">
+      <p
+        class="p-3 rounded-md w-full lg:w-fit text-sm gap-2 flex items-center justify-center text-[#374151] font-medium font-lexend bg-[#D9D9D9]"
+      >
+        <!-- <img src="assets/Vector (12).png" class="w-4" alt="" /> -->
+        Term Life Insurance
+      </p>
+      <p
+        class="p-3 rounded-md text-sm w-full lg:w-fit flex gap-2 items-center justify-center text-[#374151] font-medium font-lexend bg-[#D9D9D9]"
+      >
+        <!-- <img src="assets/Vector (13).png" class="w-4" alt="" /> -->
+        Whole Life Insurance
+      </p>
+      <p
+        class="p-3 rounded-md text-sm w-full lg:w-fit flex items-center justify-center text-[#374151] font-medium font-lexend bg-[#D9D9D9]"
+      >
+        Universal Life Insurance
+      </p>
+    </div>
+
+    <div class="flex flex-row lg:flex-col  lg:w-2/3 items-center">
+      <div class="flex flex-col lg:flex-row gap-5 lg:gap-0 items-center justify-between">
+        <div class="lg:w-2/3">
+          <img src="assets/Ellipse 20.png" alt="" />
+        </div>
+
+        <div class="flex flex-col font-lexend text-sm gap-2">
+          <p class="font-bold text-[#0D0D0D]">
+            Legacy Life <span class="text-[#FAA316]">Assure</span> was founded
+            with a mission to provide reliable and accessible life insurance
+            solutions.
+          </p>
+          <p class="font-light text-[#0D0D0D]">
+            Our journey began with a commitment to excellence and customer
+            satisfaction.
+          </p>
+          <p class="font-light text-[#0D0D0D]">
+            Legacy Life Assure is committed to delivering trusted life insurance
+            solutions that protect families and secure financial peace of mind.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 my-10 gap-4 items-center">
+      <div
+        *ngFor="let value of aboutUsItems"
+        class="shadow-[#6B72804D] bg-white p-3 rounded-lg shadow-lg"
+      >
+        <div class="font-lexend flex gap-x-3 items-center">
+          <div class="bg-[#FAA316]/30 p-2 w-fit rounded-2xl">
+            <img src="{{ value.icon }}" alt="" />
+          </div>
+          <div class="flex flex-col gap-y-1">
+            <h3 class="text-sm font-medium">{{ value.items }}</h3>
+            <p class="font-light text-xs w-2/3">
+              {{ value.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col-reverse lg:flex-row lg:w-3/4 gap-10  lg:items-center">
+      <div class="font-lexend">
+        <h1 class="font-lexend text-[22px] font-semibold">Customized Coverages For Your Needs</h1>
+        <p class="font-lexend font-light text-[13px] my-2">
+          We understand that every family is unique. That's why we offer
+          customizable policies that can be tailored to your specific situation
+          and requirements.
+        </p>
+
+        <div class="flex flex-col gap-y-2">
+          <div class="flex items-center gap-3">
+            <img src="assets/Group 117.png" alt="" />
+            <p class="font-lexend font-light text-[13px]">
+              Term life insurance
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="assets/Group 117.png" alt="" />
+            <p class="font-lexend font-light text-[13px]">
+              Whole life insurance
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="assets/Group 117.png" alt="" />
+            <p class="font-lexend font-light text-[13px]">
+              Critical illness coverage
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="assets/Group 117.png" alt="" />
+            <p class="font-lexend font-light text-[13px]">
+              Diability insurance
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center ">
+        <img src="assets/Rectangle 51.png" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

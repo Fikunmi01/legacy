@@ -1,0 +1,60 @@
+
+<div class="p-4 lg:p-15 bg-[#111b27]">
+  <div class="font-lexend flex mb-4 items-start">
+    <div class="flex items-center gap-4">
+      <img src="assets/Group 20.png" alt="" />
+      <div>
+        <h3 class="text-[#FAA316] text-xl font-semibold">Featured services</h3>
+      </div>
+    </div>
+  </div>
+
+  <p class="font-bold text-white mb-10 text-center text-3xl">
+    The fields on which we have given our services.
+  </p>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 overflow-hidden gap-4" id="plans">
+    <div
+      class="font-lexend py-10 flex gap-2 items-center flex-col bg-white shadow-[0_0_30px_rgba(0,0,0,0.1)] text-center rounded-[5px] justify-center"
+      *ngFor="let value of servicesArray2"
+    >
+      <img src="{{ value.img }}" alt="" />
+      <h2 class="text-2xl text-[#4B5563] font-semibold">{{ value.title }}</h2>
+      <p class="w-3/4 text-[#4B5563] font-normal font-lexend text-base">
+        {{ value.description }}
+      </p>
+
+      <div class="w-full left-1/6 relative px-6 space-y-2">
+        <div
+          class="flex items-center font-lexend font-normal text-base text-[#4B5563] gap-2"
+        >
+          <img src="assets/Group 21.png" alt="" class="flex-shrink-0" />
+          <p class="text-left w-2/3">{{ value.perk1 }}</p>
+        </div>
+        <div
+          class="flex items-center font-lexend font-normal text-base text-[#4B5563] gap-2"
+        >
+          <img src="assets/Group 21.png" alt="" class="flex-shrink-0" />
+          <p class="text-left">{{ value.perk2 }}</p>
+        </div>
+        <div
+          class="flex items-center font-lexend font-normal text-base text-[#4B5563] gap-2"
+        >
+          <img src="assets/Group 21.png" alt="" class="flex-shrink-0" />
+          <p class="text-left w-2/3">{{ value.perk3 }}</p>
+        </div>
+        <div
+          class="flex items-center font-lexend font-normal text-base text-[#4B5563] gap-2"
+        >
+          <img src="assets/Group 21.png" alt="" class="flex-shrink-0" />
+          <p class="text-left">{{ value.perk4 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <p class="font-lexend font-medium text-2xl font-medium text-white text-center my-10">Need help choosing the right coverage for your needs?</p>
+    <button class="bg-[#FAA316] text-white p-2.5 rounded-md ">Get Free Consultation</button>
+  </div>
+</div>

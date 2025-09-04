@@ -1,0 +1,116 @@
+<div class="bg-[#D9D9D9]/20 flex flex-col py-10 lg:flex-row items-center lg:py-20 lg:px-10 justify-center gap-10">
+  <div
+    class="bg-white p-3 shadow-[0_0_30px_rgba(0,0,0,0.1)] rounded-lg flex flex-col gap-4"
+  >
+    <div class="flex items-center justify-between">
+      <div class="bg-[#FAA316]/30 p-1.5 rounded-md">
+        <img src="assets/feedback-review 1.png" alt="" />
+      </div>
+      <span
+        class="rounded-full bg-[#FAA316] px-3 text-white font-lexend font-semibold py-1.5"
+        >1000<sup>+</sup></span
+      >
+    </div>
+    <div class="font-lexend">
+      <h3 class="font-semibold text-2xl text-[#4B5563]">Satisfied clients</h3>
+      <p class="font-light text-base w-2/3 text-[#4B5563]">
+        We are very happy to serve them!
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="bg-white p-3 shadow-[0_0_30px_rgba(0,0,0,0.1)] rounded-lg flex flex-col gap-4"
+  >
+    <div class="flex items-center justify-between">
+      <div class="bg-[#89C709]/50 p-1.5 rounded-md">
+        <img src="assets/rocket-lunch 1.png" alt="" />
+      </div>
+      <span
+        class="rounded-full bg-[#89C709] px-3 text-white font-lexend font-semibold py-1.5"
+        >250<sup>+</sup></span
+      >
+    </div>
+    <div class="font-lexend">
+      <h3 class="font-semibold text-2xl text-[#4B5563]">Completed projects</h3>
+      <p class="font-light text-base w-2/3 text-[#4B5563]">
+        We have done many projects!
+      </p>
+    </div>
+  </div>
+  <div
+    class="bg-white p-3 shadow-[0_0_30px_rgba(0,0,0,0.1)] rounded-lg flex flex-col gap-4"
+  >
+    <div class="flex items-center justify-between">
+      <div class="bg-[#6C9C07]/50 p-1.5 rounded-md">
+        <img src="assets/display-chart-up 1.png" alt="" />
+      </div>
+      <span
+        class="rounded-full bg-[#6C9C07] px-3 text-white font-lexend font-semibold py-1.5"
+        >100%</span
+      >
+    </div>
+    <div class="font-lexend">
+      <h3 class="font-semibold text-2xl text-[#4B5563]">Satisfied clients</h3>
+      <p class="font-light text-base w-2/3 text-[#4B5563]">
+        We are alert to be successful!
+      </p>
+    </div>
+  </div>
+</div>
+<div class="lg:py-10 py-5 px-4 lg:px-20">
+  <div class="text-center flex flex-col mb-10 items-center justify-center">
+    <h1
+      class="font-lexend font-semibold text-3xl lg:text-[70px] text-center text-[#FAA316]"
+    >
+      Why Choose Us?
+    </h1>
+    <img src="assets/Line 1.png" alt="" />
+  </div>
+
+  <div class="flex lg:flex-row flex-col gap-6">
+    <div class="w-full">
+      <h2 class="font-lexend text-[#4B5563] font-semibold text-3xl">
+        Legacy Life Assure is committed to help cients to reach the goals.
+      </h2>
+      <p class="text-xl font-normal my-10 !text-[#4B5563]">
+        <strong>Legacy Life Assure</strong> provides life insurance solutions
+        with honesty, care and dedication. We serve individuals and families who
+        value <strong>trust and protection</strong>. together, we build lasting
+        relaltionships rooted in integrity and shared reponsibility.
+      </p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-2 lg:gap-x-4">
+        <div class="flex items-center gap-3 mb-2" *ngFor="let value of Perks">
+          <img src="assets/check-icon.png" class="w-8 h-8" alt="" />
+          <p class="text-[#4B5563] font-lexend font-semibold text-lg">
+            {{ value.item }}
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3" *ngFor="let value of Perks">
+          <img src="assets/check-icon.png" alt="" srcset="" />
+          <P class="text-[#4B5563] font-lexend font-semibold text-lg">
+            {{ value.item }}
+          </P>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:w-2/3">
+      <div
+        *ngFor="let item of whyUs"
+        class="flex flex-col h-fit w-fit bg-white items-start shadow-[0_0_30px_rgba(0,0,0,0.1)] p-3 rounded-xl gap-y-1"
+      >
+        <div class="bg-[#FAA316]/30 p-2 rounded-md">
+          <img src="{{ item.icon }}" alt="" />
+        </div>
+        <h3 class="font-lexend font-medium text-xl text-[#0D0D0D]">
+          {{ item.heading }}
+        </h3>
+        <p class="text-sm font-light text-[#4B5563] font-lexend mb-2">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
