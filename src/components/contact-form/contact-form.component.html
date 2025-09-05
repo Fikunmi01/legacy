@@ -4,77 +4,118 @@
     class="absolute inset-0 w-full h-full object-cover -z-10"
     alt=""
   />
+
   <div
     class="lg:m-20 m-4 relative items-start h-fit backdrop-blur-xl bg-white/20 border border-white/30 rounded-xl shadow-xl flex flex-col gap-y-5 p-2 lg:p-8 z-10"
   >
     <h1 class="font-lexend font-bold text-white text-3xl">
       Compare quotes and get life insurance in right way
     </h1>
-    <div class="flex flex-col gap-y-3 border-b border-white items-start pb-4">
+
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+      class="flex flex-col gap-y-3 border-b border-white items-start pb-4"
+    >
       <div class="flex flex-col items-start gap-2">
-        <label for="Name" class="font-lexend text-xl font-semibold text-white"
-          >Name<sup class="text-red-400">*</sup></label
-        >
+        <label for="Name" class="font-lexend text-xl font-semibold text-white">
+          Name<sup class="text-red-400">*</sup>
+        </label>
         <div class="flex gap-3">
-          <input
-            id="Name"
-            type="text"
-            placeholder="First"
-            class="border-[#FFFFFF66] w-48 bg-[#D9D9D933] backdrop-blur-sm rounded outline-none border p-2 placeholder-white/70 text-white"
-          />
-          <input
-            id="lastname"
-            type="text"
-            placeholder="Last"
-            class="border-[#FFFFFF66] w-48 bg-[#D9D9D933] backdrop-blur-sm rounded outline-none border p-2 placeholder-white/70 text-white"
-          />
+          <div class="flex flex-col">
+            <input
+              id="Name"
+              formControlName="firstName"
+              type="text"
+              placeholder="First"
+              class="border-[#FFFFFF66] w-48 bg-[#D9D9D933] backdrop-blur-sm rounded outline-none border p-2 placeholder-white/70 text-white"
+              [class.border-red-400]="isFieldInvalid('firstName')"
+            />
+            <span
+              *ngIf="isFieldInvalid('firstName')"
+              class="text-red-400 text-sm mt-1"
+            >
+              {{ getFieldError("firstName") }}
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <input
+              id="lastname"
+              formControlName="lastName"
+              type="text"
+              placeholder="Last"
+              class="border-[#FFFFFF66] w-48 bg-[#D9D9D933] backdrop-blur-sm rounded outline-none border p-2 placeholder-white/70 text-white"
+              [class.border-red-400]="isFieldInvalid('lastName')"
+            />
+            <span
+              *ngIf="isFieldInvalid('lastName')"
+              class="text-red-400 text-sm mt-1"
+            >
+              {{ getFieldError("lastName") }}
+            </span>
+          </div>
         </div>
       </div>
 
       <div class="flex flex-col gap-2">
-        <label for="email" class="font-lexend text-xl font-semibold text-white"
-          >Email<sup class="text-red-400">*</sup></label
-        >
+        <label for="email" class="font-lexend text-xl font-semibold text-white">
+          Email<sup class="text-red-400">*</sup>
+        </label>
         <input
           id="Email"
+          formControlName="email"
           type="text"
           placeholder="johndoes@email.com"
           class="border-[#FFFFFF66] w-96 bg-[#D9D9D933] backdrop-blur-sm rounded outline-none border p-2 placeholder-white/70 text-white"
+          [class.border-red-400]="isFieldInvalid('email')"
         />
+        <span *ngIf="isFieldInvalid('email')" class="text-red-400 text-sm">
+          {{ getFieldError("email") }}
+        </span>
       </div>
 
       <div class="flex flex-col gap-2">
-        <label for="phone" class="font-lexend text-xl font-semibold text-white"
-          >Phone<sup class="text-red-400">*</sup></label
-        >
+        <label for="phone" class="font-lexend text-xl font-semibold text-white">
+          Phone<sup class="text-red-400">*</sup>
+        </label>
         <input
           id="phone"
+          formControlName="phone"
           type="tel"
           placeholder="+1 (555) 123-4567"
           class="border-[#FFFFFF66] w-96 bg-[#D9D9D933] backdrop-blur-sm rounded outline-none border p-2 placeholder-white/70 text-white"
+          [class.border-red-400]="isFieldInvalid('phone')"
+          (keypress)="onPhoneKeyPress($event)"
         />
+        <span *ngIf="isFieldInvalid('phone')" class="text-red-400 text-sm">
+          {{ getFieldError("phone") }}
+        </span>
       </div>
+
       <div class="flex flex-col gap-2">
         <label
           for="comment"
           class="font-lexend text-xl font-semibold text-white"
-          >Comment or Message</label
         >
+          Comment or Message
+        </label>
         <textarea
           class="border-[#FFFFFF66] w-96 bg-[#D9D9D933] backdrop-blur-sm rounded outline-none border p-2 placeholder-white/70 text-white resize-none"
           name="comment"
           id="comment"
+          formControlName="comment"
           rows="5"
           placeholder="Tell us about your insurance needs or any questions you have..."
         ></textarea>
       </div>
 
       <button
+        type="submit"
         class="bg-[#FAA316] hover:bg-[#FAA316]/90 transition-colors p-3 rounded-md font-lexend font-semibold text-xl text-white"
       >
         Submit
       </button>
-    </div>
+    </form>
 
     <div>
       <p class="text-white font-normal text-[22px]">
