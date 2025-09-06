@@ -1,10 +1,12 @@
-<div class="">
-  <img
-    src="assets/Rectangle 3.png"
-    class="h-[115vh] lg:h-screen w-full opacity-85"
-    alt=""
-  />
-  <app-navbar></app-navbar>
-
+<div class="relative">
+  <!-- Background image that maintains aspect ratio -->
+  <div 
+    class="w-full min-h-screen bg-cover bg-center bg-no-repeat opacity-85"
+    style="background-image: url('assets/Rectangle 3.png')"
+  ></div>
   
+  <!-- Overlay to ensure navbar is visible -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40"></div>
+  
+  <app-navbar></app-navbar>
 </div>

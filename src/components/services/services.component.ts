@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-services',
@@ -9,6 +9,23 @@ import { Component } from '@angular/core';
   styleUrl: './services.component.scss',
 })
 export class ServicesComponent {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  scrollToSection(sectionId: string): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.offsetTop;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }
   servicesArray: Array<any> = [
     {
       title: 'Term Life Insurance',
