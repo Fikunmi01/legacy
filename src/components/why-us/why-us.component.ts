@@ -14,7 +14,16 @@ export class WhyUsComponent {
       item: 'We Can Save You Money',
     },
     {
-      item: 'We Can Save You Money',
+      item: 'Trust and Expertise Focused',
+    },
+  ];
+
+    Perks2: Array<any> = [
+    {
+      item: 'Conversational & Friendly',
+    },
+    {
+      item: 'Results-Driven',
     },
   ];
 

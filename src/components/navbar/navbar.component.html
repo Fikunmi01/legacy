@@ -1,12 +1,12 @@
 <div>
   <div
-    class="flex items-center absolute w-full top-4 font-lexend justify-between px-3 lg:p-4 lg:p-4 z-50"
+    class="flex items-center absolute w-full top-0 lg:-top-7 font-lexend justify-between px-3 lg:px-4 z-50"
   >
-    <img class="w-1/4 lg:w-1/8" src="/assets/logo.png" alt="" />
+    <img class="absolute lg:relative top-0 w-1/2 lg:w-1/4" src="/assets/logo.png" alt="" />
 
     <!-- Mobile Menu Toggle -->
     <div
-      class="lg:hidden z-30 relative cursor-pointer"
+      class="lg:hidden right-0 top-4 absolute right-0 z-30 cursor-pointer"
       (click)="toggleMobileMenu()"
     >
       <img
@@ -61,7 +61,7 @@
       </ul>
       <img
         src="assets/Rectangle 2.png"
-        class="absolute right-4 w-2/3 z-10"
+        class="absolute right-0  w-2/3 z-10"
         alt=""
       />
     </div>
@@ -88,7 +88,7 @@
       [class.opacity-0]="!mobileMenuOpen"
     >
       <!-- Mobile Menu Header -->
-      <div class="flex items-end justify-between p-6 border-b border-gray-700">
+      <div class="flex items-end justify-between p-6  border-gray-700">
         <h2 class="text-white text-xl font-semibold opacity-0">Menu</h2>
         <button
           (click)="closeMobileMenu()"
@@ -99,7 +99,7 @@
       </div>
 
       <!-- Mobile Navigation -->
-      <ul class="flex flex-col py-6 px-3  space-y-6 text-white text-lg">
+      <ul class="flex flex-col py-6 px-3 space-y-6 text-white text-lg">
         <li
           (click)="scrollToSection('why-us'); closeMobileMenu()"
           class="cursor-pointer hover:text-yellow-400 transition-colors py-2 border-b border-gray-700/80 hover:border-yellow-400/50"
@@ -140,14 +140,13 @@
         >
           Get Started
         </button>
-     
       </div>
     </div>
   </div>
 
   <!-- Main Content -->
   <div
-    class="flex flex-col gap-6 lg:flex-row absolute px-4 lg:px-10 text-white lg:top-48 top-16 w-full lg:w-3/4 items-center justify-between"
+    class="flex flex-col gap-3 lg:flex-row absolute px-4 lg:px-10 text-white lg:top-48 top-22 w-full lg:w-3/4 items-center justify-between"
   >
     <div class="w-full lg:w-3/4 flex flex-col gap-y-4">
       <h1 class="font-lexend text-white text-3xl lg:text-6xl font-semibold">
